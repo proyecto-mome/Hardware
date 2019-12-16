@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Hardware | By Edgar</title>
+    <link rel="stylesheet" href="Diseño/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <style>
+
+    body{
+        font-family: thaoma;
+        font-size: 15px;
+        line-height: 1.75;
+        margin: 0;
+        padding: 0;
+    }
+
+    #timeline{
+        display: flex;
+        background-color: #031725;
+    }
+
+    #timeline:hover .item{
+        width: 23.3333%;
+    }
+
+    .item{
+        transform: translate3d(0,0,0);
+        position: relative;
+        width: 25%;
+        height: 100vh;
+        min-height: 600px;
+        color: white;
+        overflow: hidden;
+        transition: width 0.5s ease;
+    }
+
+    .item::before, .item:after{
+        transform: translate3d(0,0,0);
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .item:after{
+        background: rgba(21,126,209,0.85);
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    .item:before{
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 75%);
+        z-index: 1;
+        opacity: 1;
+        transform: translate3d(0,0,0) translateY(50%);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .item:hover{
+        width: 77% !important;
+    }
+
+    .item:hover .content{
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 0.75s ease 0.5s;
+    }
+
+    .item:hover .bg{
+        filter: grayscale(0);
+
+    }
+
+    .content{
+        transform: translate3d(0,0,0) translate3d(25px);
+        position:relative;
+        z-index: 1;
+        text-align: center;
+        margin: 0 1.618em;
+        top: 55%;
+        opacity: 0;
+    }
+
+    .content h1{
+        font-family: tahoma;
+        text-transform: uppercase;
+        color: #ff0000;
+        font-size: 1.44rem;
+        font-weight: normal;
+    }
+    .letra{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        z-index: 1;
+        border-top: 1px solid rgb(254, 9, 224);
+        border-bottom: 1px solid rgb(254, 9, 224);
+    }
+
+    .letra p{
+        font-family: tahoma;
+        font-size: 1.3rem;
+        line-height: 0;
+        color: rgb(0, 255, 209);
+    }
+    .bg{
+        transform: translate3d(0,0,0);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-size: cover;
+        background-position: center center;
+        transition: filter 0.5s ease;
+        filter: grayscale(100%);
+    }
+
+    p{
+        font-family: tahoma;
+        font-weight: normal;
+    }
+
+
+
+
+    </style>
+</head>
+<body>
+    <section id="timeline">
+        <div class="item">
+        <div class="bg" style="background-image: url(images/Caja.jpg);"></div>
+        <div class="letra">
+            <p>Caja</p>
+        </div>
+        <div class="content">
+            <h1>Thermaltake View 37</h1>
+            <p>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <div class="middle">
+              <a href="https://es.thermaltake.com/view-37-argb-edition.html" class="btn btn4">Especificaciones</a>
+            </div>
+            </p>
+        </div>
+    </div>
+    <div class="item">
+        <div class="bg" style="background-image: url(images/Placa.jpg);"></div>
+        <div class="letra">
+            <p>Placa Base</p>
+        </div>
+        <div class="content">
+            <h1>Aorus x299 Gaming 9</h1>
+            <p>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <div class="middle">
+              <a href="http://es.gigabyte.com/products/page/mb/x299_aorus_gaming_9rev_10#kf" class="btn btn4">Especificaciones</a>
+              </div>
+            </p>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="bg" style="background-image: url(images/Procesador.jpg);"></div>
+        <div class="letra">
+            <p>Procesador</p>
+        </div>
+        <div class="content">
+            <h1>i9 9980XE</h1>
+            <p>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <div class="middle">
+              <a href="https://ark.intel.com/content/www/us/en/ark/products/189126/intel-core-i9-9980xe-extreme-edition-processor-24-75m-cache-up-to-4-50-ghz.html" class="btn btn4">Especificaciones</a>
+              </div>
+            </p>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="bg" style="background-image: url(images/RAM.jpg);"></div>
+        <div class="letra">
+            <p>RAM</p>
+        </div>
+        <div class="content">
+                <h1>G.SKILL Trident Z 3200</h1>
+            <p>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <div class="middle">
+              <a href="https://www.gskill.com/product/165/166/1536561503/F4-3200C16Q-32GTZRTrident-Z-RGBDDR4-3200MHz-CL16-18-18-38-1.35V32GB-(4x8GB)" class="btn btn4">Especificaciones</a>
+              </div>
+            </p>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="bg" style="background-image: url(images/Almacenamiento.jpg);"></div>
+        <div class="letra">
+            <p>Almacenamiento</p>
+        </div>
+        <div class="content">
+            <h1>Corsair NVMe 960 & HyperX SSD 960 GB</h1>
+            <p>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <div class="middle">
+              <a href="https://www.corsair.com/es/es/Categor%C3%ADas/Productos/Almacenamiento/SSD-M-2/Force-Series-MP510/p/CSSD-F960GBMP510" class="btn btn4">Corsair 960GB</a>
+              </div>
+            </p>
+			<p>
+			  <div class="middle">
+              <a href="https://www.hyperxgaming.com/es/storage/savage-sata-solid-state-drive" class="btn btn4">HyperX</a>
+              </div>
+			</p>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="bg" style="background-image: url(images/Grafica.jpg);"></div>
+        <div class="letra">
+            <p>Gráfica</p>
+        </div>
+        <div class="content">
+            <h1>RTX 2080 ti</h1>
+            <p>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <div class="middle">
+              <a href="https://www.aorus.com/GV-N208TAORUSX-WB-11GC" class="btn btn4">Especificaciones</a>
+              </div>
+            </p>
+        </div>
+    </div>
+	
+    <div class="item">
+        <div class="bg" style="background-image: url(images/Liquida.jpg);"></div>
+        <div class="letra">
+            <p>Refrigeración</p>
+        </div>
+        <div class="content">
+            <h1></h1>
+            <p>
+
+            </p>
+            <p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            <div class="middle">
+                <a href="Productos/Refrigeración.html" class="btn btn4">Especificaciones</a>
+              </div>
+            </p>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="bg" style="background-image: url(images/PSU.jpg);"></div>
+        <div class="letra">
+            <p>Alimentacion</p>
+        </div>
+        <div class="content">
+            <h1>Thermaltake RGB Plus 1200W</h1>
+            <p>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+          <div class="middle">
+              <a href="https://es.thermaltake.com/toughpower-irgb-plus-1200w-platinum-tt-premium-edition.html" class="btn btn4">Especificaciones</a>
+            </div>
+            </p>
+        </div>
+    </div>
+</section>
+</body>
+</html>
